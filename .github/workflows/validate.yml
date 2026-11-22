@@ -1,0 +1,17 @@
+name: Validate Orca plugin catalog
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate catalog JSON
+        run: node -e "JSON.parse(require('node:fs').readFileSync('orca-catalog.json','utf8')); console.log('catalog JSON valid')"

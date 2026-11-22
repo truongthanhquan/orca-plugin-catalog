@@ -1,0 +1,43 @@
+{
+  "$schema": "https://raw.githubusercontent.com/stablyai/orca/main/docs/schemas/plugins/orca-catalog.v2.schema.json",
+  "catalogVersion": 2,
+  "name": "Truong Thanh Quan Plugins",
+  "owner": "truongthanhquan",
+  "plugins": [
+    {
+      "id": "truongthanhquan.cloudflare-relay",
+      "source": {
+        "kind": "git",
+        "url": "https://github.com/truongthanhquan/orca-cloudflare-relay-plugin.git",
+        "ref": "main"
+      },
+      "description": "Generate a compatible Orca relay deployment configuration for Cloudflare Workers.",
+      "categories": ["cloud", "infrastructure"],
+      "releases": [
+        {
+          "version": "1.0.0",
+          "commit": "048298ed2378bc227eb6046aa9a8eb1658bce204",
+          "contentHash": "9a794c2655d061b703deef0f23239c9db8afa69059269f81a8afad4ca79b8962",
+          "execution": "trusted-worker",
+          "minimumOrca": "1.4.246",
+          "name": "Cloudflare Relay Setup",
+          "license": "MIT",
+          "repository": "https://github.com/truongthanhquan/orca-cloudflare-relay-plugin",
+          "updatedAt": "2026-11-22",
+          "contributes": [
+            { "kind": "panels", "name": "Cloudflare Relay" },
+            {
+              "kind": "commands",
+              "name": "Cloudflare Relay: Generate deployment config"
+            },
+            {
+              "kind": "commands",
+              "name": "Cloudflare Relay: Validate deployment settings"
+            }
+          ],
+          "capabilities": ["storage:own", "settings:own", "secrets:own"]
+        }
+      ]
+    }
+  ]
+}

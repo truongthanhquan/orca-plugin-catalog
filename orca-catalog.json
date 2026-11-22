@@ -15,6 +15,29 @@
       "categories": ["cloud", "infrastructure"],
       "releases": [
         {
+          "version": "1.1.0",
+          "commit": "67c6cfa31937c8d95cb2d5a46ff4529cee683399",
+          "contentHash": "c50d2c99ef6f8eabd3096ff5929ee25da909cc799074fed0032c74f8289a667e",
+          "execution": "trusted-worker",
+          "minimumOrca": "1.4.246",
+          "name": "Cloudflare Relay Setup",
+          "license": "MIT",
+          "repository": "https://github.com/truongthanhquan/orca-cloudflare-relay-plugin",
+          "updatedAt": "2026-11-22",
+          "contributes": [
+            { "kind": "panels", "name": "Cloudflare Relay" },
+            {
+              "kind": "commands",
+              "name": "Cloudflare Relay: Generate deployment config"
+            },
+            {
+              "kind": "commands",
+              "name": "Cloudflare Relay: Validate deployment settings"
+            }
+          ],
+          "capabilities": ["storage:own", "settings:own", "secrets:own"]
+        },
+        {
           "version": "1.0.0",
           "commit": "048298ed2378bc227eb6046aa9a8eb1658bce204",
           "contentHash": "9a794c2655d061b703deef0f23239c9db8afa69059269f81a8afad4ca79b8962",
